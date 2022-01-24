@@ -1,6 +1,3 @@
-from os import read
-
-
 file_path = "./data-01-test-score.csv"
 
 class ReadCSV():
@@ -25,9 +22,13 @@ class ReadCSV():
     def merge_list(self):
         if len(self.__data) == 0:
             self.read_file()
-        return [sum(list(map(
-            lambda x: int(x),line))) 
-                for line in self.__data]
+        try:
+            return [sum(list(map(
+                lambda x: int(x),line))) 
+                    for line in self.__data]
+        except ValueError:
+            print("숫자형이 아닌 데이터가 있습니다.")
+            return []
 
 if __name__ == '__main__':
     read_csv = ReadCSV(file_path)
