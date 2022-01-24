@@ -14,4 +14,5 @@ def read_file(file_path):
     except FileNotFoundError as e:
         print(e)
         return []
+
 print(read_file(file_path))

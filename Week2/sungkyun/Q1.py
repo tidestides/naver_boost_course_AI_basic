@@ -1,7 +1,10 @@
+#test score, mid : 50, final : 75
+
 class Score():
-    def __init__(self,mid,final):
+    def __init__(self, mid, final):
         self.__mid = mid
         self.__final = final
+    
     @property
     def mid(self):
         return self.__mid
@@ -9,5 +12,6 @@ class Score():
     def final(self):
         return self.__final
 
-score = Score(50,75)
-print((score.mid + score.final)/2.0)
+# 출력함수
+score = Score(50, 75)
+print((score.mid+score.final)/2)

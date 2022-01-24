@@ -10,19 +10,21 @@ class ReadCSV():
     @property
     def data(self):
         return self.__data
-    # 없어도 되는데??
+    
     
     def read_file(self):
         try:
-            self.__data = [line.split(',') for line in open(file_path).read().split()]
+            f = open(file_path,'r') #열어준 파일을 닫기 위해서 추가
+            self.__data = [line.split(',') for line in f.read().split()]
+            f.close()
             return self.__data
         except FileNotFoundError as e:
             print(e)
-            return []
-    
+            return []   
+            
     def merge_list(self):
         if len(self.__data) == 0:
-            self.read_file(self)
+            self.read_file()
         return [sum(list(map(
             lambda x: int(x),line))) 
                 for line in self.__data]
