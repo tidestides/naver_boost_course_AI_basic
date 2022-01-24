@@ -10,9 +10,13 @@ file_path = "./data-01-test-score.csv"
 #short_ver : 
 def read_file(file_path):
     try:
-        return [line.split(',') for line in open(file_path).read().split()]
+        f = open(file_path,'r')
+        result = [line.split(',') for line in f.read().split()]
+        f.close()
+        return result
     except FileNotFoundError as e:
         print(e)
         return []
+    
 
 print(read_file(file_path))

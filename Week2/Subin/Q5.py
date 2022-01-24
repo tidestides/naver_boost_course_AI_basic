@@ -27,3 +27,5 @@ file_path = "./data-01-test-score.csv"
 read_csv = ReadCSV(file_path)
 print(read_csv.read_file())
 print(read_csv.merge_list())
+
+#지웅: sum() 을 리스트에 적용하면 안에 있는 원소들을 다 더한 값을 반환해 줍니다. 참고하시길 바랍니다!

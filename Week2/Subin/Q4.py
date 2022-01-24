@@ -26,3 +26,5 @@ file_path = "./data-01-test-score.csv"
 read_csv = ReadCSV(file_path)
 print(read_csv.read_file())
 print(read_csv.merge_list())
+
+#지웅: 잘 구현 하셨지만 역시 파일을 닫는 부분이 없어서 아쉽습니다!

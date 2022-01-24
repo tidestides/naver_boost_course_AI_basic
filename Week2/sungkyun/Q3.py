@@ -5,7 +5,6 @@ file_path = "./data-01-test-score.csv"
 
 def read_file(file_path):
     data_list = list()
-
     
     with open(file_path) as filepath:
             
@@ -20,3 +19,5 @@ def read_file(file_path):
 
 #출력함수
 print(read_file(file_path))
+
+#지웅: with open 구문으로 file close부분이 필요없게 구현. 수빈님과 유사한듯

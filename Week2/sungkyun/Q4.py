@@ -47,3 +47,5 @@ class ReadCSV():
 read_csv = ReadCSV(file_path)
 print(read_csv.read_file())
 print(read_csv.merge_list())
+
+#지웅: re라는 모듈 & 정규식 표현 사용... 하나 배워갑니다.

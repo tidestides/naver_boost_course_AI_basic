@@ -50,3 +50,6 @@ class ReadCSV():
 read_csv = ReadCSV(file_path)
 #print(read_csv.read_file())
 print(read_csv.merge_list())
+
+#지웅: merge_list를 호출할 때마다 텍스트 파일을 읽어와야 해서 시간이 많이 걸립니다. 읽어온 데이터를 data_list와 같은 필드에
+#   저장하면 메모리적인 소요가 발생해도 빠른시간에 작업을 끝낼 수 있습니다.
