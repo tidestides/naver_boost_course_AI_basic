@@ -21,3 +21,4 @@ def read_file(file_path):
 print(read_file(file_path))
 
 #지웅: with open 구문으로 file close부분이 필요없게 구현. 수빈님과 유사한듯
+#수빈: 
