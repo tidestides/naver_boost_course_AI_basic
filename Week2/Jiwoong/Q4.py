@@ -4,6 +4,7 @@ class ReadCSV():
     def __init__(self,file_path):
         self.__file_path = file_path
         self.__data = []
+    
     @property
     def data(self):
         return self.__data
@@ -26,6 +27,7 @@ class ReadCSV():
             return [sum(list(map(
                 lambda x: int(x),line))) 
                     for line in self.__data]
+        #int(x) 실행시 문자형 string이 있을 경우
         except ValueError:
             print("숫자형이 아닌 데이터가 있습니다.")
             return []
